@@ -26,6 +26,10 @@ class NicknameController extends Controller
             'teacher'=> $teacher
         ]);
     }
+
+    public function create(){
+        return view('create');
+    }
     public function insert(){
 
     }
