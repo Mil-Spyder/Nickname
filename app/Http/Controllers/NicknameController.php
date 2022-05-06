@@ -20,17 +20,33 @@ class NicknameController extends Controller
         //$nickname = ['juju', 'chacha'];
         return view('home', compact('teachers'));
     }
-    public function show($id){
+    public function show($id)
+    {
         $teacher = teacher::findOrFail($id);
-        return view('details',[
-            'teacher'=> $teacher
+        return view('details', [
+            'teacher' => $teacher
         ]);
     }
 
-    public function create(){
+    public function create()
+    {
         return view('create');
     }
-    public function insert(){
 
+    public function store(Request $request)
+    {
+        $teacher= new teacher();
+        $teacher->Gender=$request->gender;
+        $teacher->Name =$request->name;
+        $teacher->Firstname=$request->Firstname;
+        $teacher->Nickname=$request->Nickname;
+        $teacher->Origin=$request->Origin;
+        $teacher->section_id=$request->Section;
+        $teacher->save();
+
+        dd($teacher);
+    }
+    public function insert()
+    {
     }
 }

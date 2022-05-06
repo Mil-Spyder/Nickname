@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('',[NicknameController::class,'index'])->name('home');
 Route::get('/teacher/create',[NicknameController::class,'create'])->name('teacher.create');
+Route::post('/teacher/create',[NicknameController::class,'store'])->name('teacher.store');
 Route::get('/teacher/{id}',[NicknameController::class,'show'])->name('teacher.show');
 Route::get('/teacher/upload',[NicknameController::class,'insert'])->name('upload');
 
