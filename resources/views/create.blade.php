@@ -13,8 +13,8 @@
             surnom:<input type="text" name="Nickname">
             <textarea name="Origin" id="" cols="30" rows="10">Origin</textarea>
             <select name="Section" id="">
-                <option value="informatique">informatique</option>
-                <option value="mecanique">mécanique</option>
+                <option value="1">informatique</option>
+                <option value="2">mécanique</option>
             </select>
             <button type="submit" class="bg-green-500">ajouter</button>
         </form>

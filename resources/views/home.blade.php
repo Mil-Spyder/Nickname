@@ -30,7 +30,7 @@
                         </td>
                         <td>
                             <ul>
-                                <li><a href="#">modifier</a></li>
+                                <li><a href="{{ route('teacher.update', ['id' => $teacher->id]) }}">modifier</a></li>
                                 <li><a href="#">supprimer</a></li>
                                 <li><a href="{{ route('teacher.show', ['id' => $teacher->id]) }}">détails</a></li>
                             </ul>
