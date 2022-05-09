@@ -18,8 +18,12 @@ Route::get('',[NicknameController::class,'index'])->name('home');
 Route::get('/teacher/create',[NicknameController::class,'create'])->name('teacher.create');
 Route::post('/teacher/create',[NicknameController::class,'store'])->name('teacher.store');
 Route::get('/teacher/{id}',[NicknameController::class,'show'])->name('teacher.show');
-Route::get('/update/{id}',[NicknameController::class,'update'])->name('teacher.update');
-Route::post('/updated',[NicknameController::class,'update'])->name('teacher.updated');
+
+Route::match(['get', 'post'], '/teacher/update/{id}', [NicknameController::class, 'update'])->name('teacher.update');
+
+// Supprimer un enseignant
+Route::get('/teacher/delete/{teacherId}', [NicknameController::class, 'delete'])->name('teacher.delete');
+
 
 
 
